@@ -23,10 +23,10 @@ def home():
         if language in app.config['LANGUAGES']:
             session['language'] = language
     return render_template('index.html', LANGUAGES=app.config['LANGUAGES'], get_locale=get_locale)
-def mail_registration():
-    mail = request.form.get("mail")
+def mail_registration(mail):
+    #mail = request.form.get("mail")
     with open('mails.txt', 'a+') as f:
-        f.write(mail)
+        f.write(mail + '\n')
 
 @app.route('/translate')
 def translate():
