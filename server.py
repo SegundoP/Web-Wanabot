@@ -53,7 +53,7 @@ def send_email(name, email, phone, message):
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
         connection.login(OWN_EMAIL, OWN_PASSWORD)
-        connection.sendmail(OWN_EMAIL, "segundo.pueyrredon@wanabot.com", email_message)
+        connection.sendmail(OWN_EMAIL, "cristian.miguens@wanabot.com", email_message)
 
 
 
