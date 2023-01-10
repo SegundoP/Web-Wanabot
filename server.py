@@ -68,8 +68,6 @@ def send_email(name, email, phone, message):
 #         return render_template("contact.html", msg_sent=True)
 #     return render_template("contact.html", msg_sent=False)
 
-# a
-
 @app.route('/projectRPA.html')
 def project():
     return render_template("projectRPA.html")
