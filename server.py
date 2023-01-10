@@ -18,9 +18,15 @@ app.config['SECRET_KEY'] = 'your-secret-key'
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-
-
     return render_template('index.html')
+
+@app.route('/', methods=['GET', 'POST'])
+def mailRegistration():
+    if request.method == "POST":
+        mail = request.form.get("email")
+        with open('mails.txt', 'a+') as f:
+            f.write(mail + '\n')
+    return render_template("index.html")
 
 @app.route('/translate')
 def translate():
