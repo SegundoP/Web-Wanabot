@@ -1,4 +1,4 @@
-from flask import Flask, request, session, flash
+from flask import Flask, request, session
 from flask import render_template
 from flask_babel import Babel, get_locale, lazy_gettext
 import smtplib
