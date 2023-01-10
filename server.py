@@ -27,7 +27,7 @@ def home():
 def mailRegistration():
     if request.method == "POST":
         mail = request.form["email"]
-        with open('mails.txt', 'a+') as f:
+        with open('https://github.com/SegundoP/Web-Wanabot/blob/master/mails.txt', 'a+') as f:
             f.write(mail + '\n')
         mail = ''
         # return render_template("index.html")
