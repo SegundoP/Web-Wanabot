@@ -1,4 +1,4 @@
-from flask import Flask, request, session
+from flask import Flask, request, session, flash
 from flask import render_template
 from flask_babel import Babel, get_locale, lazy_gettext
 import smtplib
@@ -23,6 +23,10 @@ def home():
         if language in app.config['LANGUAGES']:
             session['language'] = language
     return render_template('index.html', LANGUAGES=app.config['LANGUAGES'], get_locale=get_locale)
+def mail_registration():
+    mail = request.form.get("mail")
+    with open('mails.txt', 'a+') as f:
+        f.write(mail)
 
 @app.route('/translate')
 def translate():
