@@ -2,7 +2,7 @@ from flask import Flask, request, session
 from flask import render_template
 from flask_babel import Babel, get_locale, lazy_gettext
 import smtplib
-import requests
+# import requests
 
 OWN_EMAIL = "pythontest@gmail.com"
 OWN_PASSWORD = "pythonudemy"
@@ -18,15 +18,19 @@ app.config['SECRET_KEY'] = 'your-secret-key'
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('index.html')
+    try:
+        mailRegistration()
+    finally:
+        return render_template('index.html')
 
 @app.route('/', methods=['GET', 'POST'])
 def mailRegistration():
     if request.method == "POST":
-        mail = request.form.get("email")
+        mail = request.form["email"]
         with open('mails.txt', 'a+') as f:
             f.write(mail + '\n')
-    return render_template("index.html")
+        mail = ''
+        # return render_template("index.html")
 
 @app.route('/translate')
 def translate():
