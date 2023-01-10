@@ -70,9 +70,9 @@ def send_email(name, email, phone, message):
 
 
 
-@app.route('/project.html')
+@app.route('/projectRPA.html')
 def project():
-    return render_template("project.html")
+    return render_template("projectRPA.html")
 
 
 if __name__ == "__main__":
