@@ -18,16 +18,9 @@ app.config['SECRET_KEY'] = 'your-secret-key'
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    if request.method == 'POST':
-        language = request.form['language']
-        if language in app.config['LANGUAGES']:
-            session['language'] = language
-    return render_template('index.html', LANGUAGES=app.config['LANGUAGES'], get_locale=get_locale)
-def mail_registration():
-    #mail = request.form.get("mail")
-    mail = request.form.get("mail")
-    with open('mails.txt', 'a+') as f:
-        f.write(mail + '\n')
+
+
+    return render_template('index.html')
 
 @app.route('/translate')
 def translate():
