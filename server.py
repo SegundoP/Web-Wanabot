@@ -77,8 +77,12 @@ def send_email(name, email, phone, message):
 #     return render_template("contact.html", msg_sent=False)
 
 @app.route('/projectRPA.html')
-def project():
+def projectRPA():
     return render_template("projectRPA.html")
+
+@app.route('/projectDashboards.html')
+def projectDash():
+    return render_template("projectDashboards.html")
 
 
 if __name__ == "__main__":
