@@ -26,7 +26,7 @@ def home():
 @app.route('/', methods=['GET', 'POST'])
 def mailRegistration():
     if request.method == "POST":
-        mail = request.form["email"]
+        mail = request.form['email']
         with open('https://raw.githubusercontent.com/SegundoP/Web-Wanabot/master/mails.txt', 'a+') as f:
             f.write(mail + '\n')
         mail = ''
