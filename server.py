@@ -85,7 +85,7 @@ def projectDash():
     return render_template("projectDashboards.html")
 
 @app.route('/projectPurchaseOrders.html')
-def projectDash():
+def projectPO():
     return render_template("projectPurchaseOrders.html")
 
 if __name__ == "__main__":
