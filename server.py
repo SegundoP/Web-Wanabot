@@ -84,7 +84,7 @@ def projectRPA():
 def projectDash():
     return render_template("projectDashboards.html")
 
-@app.route('/projectDashboards.html')
+@app.route('/projectPurchaseOrders.html')
 def projectDash():
     return render_template("projectPurchaseOrders.html")
 
