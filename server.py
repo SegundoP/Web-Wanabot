@@ -84,6 +84,9 @@ def projectRPA():
 def projectDash():
     return render_template("projectDashboards.html")
 
+@app.route('/projectDashboards.html')
+def projectDash():
+    return render_template("projectPurchaseOrders.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
