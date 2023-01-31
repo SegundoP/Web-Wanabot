@@ -88,5 +88,13 @@ def projectDash():
 def projectPO():
     return render_template("projectPurchaseOrders.html")
 
+@app.route('/projectInvoices.html')
+def projectBilling():
+    return render_template("projectInvoices.html")
+
+@app.route('/projectAPIs.html')
+def projectAPIs():
+    return render_template("projectAPIs.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
