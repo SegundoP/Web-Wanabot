@@ -653,3 +653,93 @@ section.login-page .container .login-container .login .form-group .icon-addon .f
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
+section.login-page .container .login-container .login .form-group .icon-addon:after, section.login-page .container .login-container .login .form-group .icon-addon:before, section.login-page .container-fluid .login-container .login .form-group .icon-addon:after, section.login-page .container-fluid .login-container .login .form-group .icon-addon:before {
+    display: flex;
+    content: " ";
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+section.login-page .container .login-container, section.login-page .container-fluid .login-container {
+    margin: 0px;
+    padding: 10px;
+    width: 500px;
+    height: auto;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+section.login-page .container, section.login-page .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: auto;
+    box-sizing: border-box;
+}
+
+section.login-page {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 175px);
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+section {
+    position: relative;
+    margin: 0px;
+    padding: 30px 0px;
+}
+
+section.login-page {
+    min-height: calc(100vh - 50px);
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+body.bg-gray {
+    background: var(--am-login-bg-color) !important;
+}
