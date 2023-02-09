@@ -1,4 +1,4 @@
-from flask import Flask, request, session
+from flask import Flask, request, session, redirect, url_for
 from flask import render_template
 from flask_babel import Babel, get_locale, lazy_gettext
 import smtplib
@@ -16,12 +16,14 @@ app.config['LANGUAGES'] = {
 }
 app.config['SECRET_KEY'] = 'your-secret-key'
 
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     try:
         mailRegistration()
     finally:
         return render_template('index.html')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def mailRegistration():
@@ -31,6 +33,7 @@ def mailRegistration():
             f.write(mail + '\n')
         mail = ''
         # return render_template("index.html")
+
 
 @app.route('/translate')
 def translate():
@@ -48,6 +51,8 @@ def translate():
 #     return render_template("contact.html", msg_sent=True)
 
 @app.route("/contact.html", methods=["GET", "POST"])
+
+
 def contact():
     if request.method == "POST":
         data = request.form
@@ -56,6 +61,7 @@ def contact():
         return render_template("contact.html", msg_sent=True)
     return render_template("contact.html", msg_sent=False)
 
+
 def send_email(name, email, phone, message):
     email_message = f"Subject:New Message\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
@@ -63,6 +69,64 @@ def send_email(name, email, phone, message):
         connection.login(OWN_EMAIL, OWN_PASSWORD)
         connection.sendmail(OWN_EMAIL, "cristian.miguens@wanabot.com", email_message)
 
+
+# Definir la ruta para la página de inicio de sesión
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # Recibir los datos del formulario de inicio de sesión
+        username = request.form["username"]
+        password = request.form["password"]
+
+        # Verificar si las credenciales son válidas
+        # Aquí debes buscar en la base de datos al usuario correspondiente y verificar
+        # si la contraseña proporcionada coincide con la contraseña encriptada en la base de datos.
+        # En este ejemplo, asumimos que el usuario y la contraseña son válidos.
+        if username == "example_user" and password == "example_password":
+            return redirect(url_for("formulario"))
+        else:
+            # Si las credenciales no son válidas, redirigir al usuario a la página de inicio de sesión con un mensaje de error
+            error_message = "Usuario o contraseña incorrectos"
+            return render_template("login.html", error_message=error_message)
+    else:
+        # Mostrar la página de inicio de sesión
+        return render_template("login.html")
+
+
+# Definir la ruta para el formulario
+@app.route("/formulario", methods=["GET", "POST"])
+def formulario():
+    if request.method == "POST":
+        # Recibir los datos del formulario
+        codigo_proveedor = request.form["codigo_proveedor"]
+        fecha = request.form["fecha"]
+        moneda = request.form["moneda"]
+        codigo_item = request.form["codigo_item"]
+        cantidad = request.form["cantidad"]
+        precio = request.form["precio"]
+
+        # Enviar un POST request a la API
+        response = request.post("https://example.com/api", json={
+            "codigo_proveedor": codigo_proveedor,
+            "fecha": fecha,
+            "moneda": moneda,
+            "codigo_item": codigo_item,
+            "cantidad": cantidad,
+            "precio": precio
+        })
+
+        # Verificar si el POST request fue exitoso
+        if response.status_code == 200:
+            # Mostrar un mensaje de confirmación al usuario
+            success_message = "El formulario ha sido enviado exitosamente"
+            return render_template("formulario.html", success_message=success_message)
+        else:
+            # Si el POST request no fue exitoso, mostrar un mensaje de error al usuario
+            error_message = "Ha ocurrido un error al enviar el formulario"
+            return render_template("formulario.html", error_message=error_message)
+    else:
+        # Mostrar el formulario
+        return render_template("formulario.html")
 
 
 # @app.route("/contact.html", methods=["GET", "POST"])
