@@ -725,6 +725,10 @@ body.bg-gray {
     font-weight: 900;
 }
 
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+
 section.login-page .container .login-container .login .form-group, section.login-page .container-fluid .login-container .login .form-group {
     margin: 10px 0px 0px 0px;
 }
@@ -742,4 +746,8 @@ section.login-page .container .login-container .login .form-group, section.login
 label {
     display: inline-block;
     margin-bottom: .5rem;
+}
+
+label {
+    cursor: default;
 }
