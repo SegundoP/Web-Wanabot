@@ -542,3 +542,9 @@ h6,
     width: 100%;
     height: 100%;
   }
+
+section.login-page .container .login-container .login .form-group .icon-addon, section.login-page .container-fluid .login-container .login .form-group .icon-addon {
+    display: block;
+    position: relative;
+    color: var(--font-color-default);
+}
