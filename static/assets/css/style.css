@@ -558,7 +558,7 @@ section.login-page .container .login-container .login, section.login-page .conta
     box-shadow: var(--box-shadow);
 }
 
-section.login-page .container .login-container .login .btn-primary, section.login-page .container-fluid .login-container .login .btn-primary {
+section.login-page .container .login-container .login .btn-primary2, section.login-page .container-fluid .login-container .login .btn-primary {
     margin: 0px auto;
     width: 100%;
     text-transform: none;
@@ -566,7 +566,7 @@ section.login-page .container .login-container .login .btn-primary, section.logi
     border-color: var(--primary);
 }
 
-section.login-page .container .login-container .login .btn-primary::after, section.login-page .container-fluid .login-container .login .btn-primary::after {
+section.login-page .container .login-container .login .btn-primary2::after, section.login-page .container-fluid .login-container .login .btn-primary2::after {
     position: absolute;
     right: 70px;
     font-style: normal;
@@ -757,14 +757,14 @@ div {
 }
 
 
-.btn-primary, .btn-primary:not([href]):not([tabindex]) {
+.btn-primary2, .btn-primary2:not([href]):not([tabindex]) {
     color: var(--white) !important;
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
 
 
-a.btn.btn-lg, button.btn.btn-lg {
+a.btn.btn-lg2, button.btn.btn-lg2 {
     padding: 12px 15px 12px 15px;
     border-radius: var(--border-radius);
 }
@@ -775,7 +775,7 @@ a.btn.btn-lg, button.btn.btn-lg {
 }
 
 
-a.btn, button.btn {
+a.btn2, button.btn2 {
     display: inline-flex;
     justify-content: center;
     align-content: center;
@@ -792,13 +792,13 @@ a.btn, button.btn {
 }
 
 
-.btn-default, .btn-primary, .btn-secondary, .btn-info, .btn-success, .btn-warning, .btn-danger, .btn-black {
+.btn-default, .btn-primary2, .btn-secondary, .btn-info, .btn-success, .btn-warning, .btn-danger, .btn-black {
     text-decoration: none !important;
     box-shadow: none !important;
 }
 
 
-.btn {
+.btn2 {
     display: inline-block;
     font-weight: 400;
     color: #212529;
@@ -817,7 +817,7 @@ a.btn, button.btn {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-section.login-page .container .login-container .login .btn-primary::after, section.login-page .container-fluid .login-container .login .btn-primary::after {
+section.login-page .container .login-container .login .btn-primary2::after, section.login-page .container-fluid .login-container .login .btn-primary2::after {
     position: absolute;
     right: 70px;
     font-style: normal;
@@ -835,20 +835,20 @@ section.login-page .container .login-container .login .btn-primary::after, secti
 }
 
 
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg>.btn2, .btn-lg2 {
     padding: .5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: .3rem;
 }
 
-.btn-primary {
+.btn-primary2 {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
 }
 
-.btn {
+.btn2 {
     display: inline-block;
     font-weight: 400;
     color: #212529;
