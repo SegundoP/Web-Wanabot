@@ -755,3 +755,64 @@ label {
 div {
     display: block;
 }
+
+
+.btn-primary, .btn-primary:not([href]):not([tabindex]) {
+    color: var(--white) !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+
+a.btn.btn-lg, button.btn.btn-lg {
+    padding: 12px 15px 12px 15px;
+    border-radius: var(--border-radius);
+}
+
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+
+a.btn, button.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 2px 0px;
+    padding: 10px 15px 10px 15px;
+    font-weight: var(--fw-600);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-decoration: none !important;
+    white-space: normal;
+    word-break: break-word;
+    border-radius: var(--border-radius);
+}
+
+
+.btn-default, .btn-primary, .btn-secondary, .btn-info, .btn-success, .btn-warning, .btn-danger, .btn-black {
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
