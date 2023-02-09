@@ -715,7 +715,7 @@ section.login-page {
     align-content: stretch;
     align-items: center;
     width: 100%;
-    min-height: calc(100vh - 175px);
+    min-height: calc(80vh - 175px);
     background-size: cover;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -728,7 +728,7 @@ section {
 }
 
 section.login-page {
-    min-height: calc(100vh - 50px);
+    min-height: calc(80vh - 50px);
 }
 
 .row {
