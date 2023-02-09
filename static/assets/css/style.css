@@ -554,3 +554,33 @@ h6,
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
+section.login-page .container, section.login-page .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: auto;
+    box-sizing: border-box;
+}
+
+section.login-page .container .login-container, section.login-page .container-fluid .login-container {
+    margin: 0px;
+    padding: 10px;
+    width: 500px;
+    height: auto;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
