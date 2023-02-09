@@ -751,3 +751,7 @@ label {
 label {
     cursor: default;
 }
+
+div {
+    display: block;
+}
