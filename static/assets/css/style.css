@@ -595,3 +595,11 @@ element.style {
 section.login-page .container .login-container .login p span.switchery, section.login-page .container-fluid .login-container .login p span.switchery {
     margin: 0px 5px;
 }
+
+element.style {
+    display: none;
+}
+
+section.login-page .container .login-container .login p span.active, section.login-page .container-fluid .login-container .login p span.active {
+    color: var(--primary);
+}
