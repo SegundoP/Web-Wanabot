@@ -50,7 +50,7 @@ def translate():
 #     send_email(data["name"], data["email"], data["phone"], data["message"])
 #     return render_template("contact.html", msg_sent=True)
 
-@app.route("/contact.html", methods=["GET", "POST"])
+@app.route("/contact", methods=["GET", "POST"])
 
 
 def contact():
@@ -94,7 +94,7 @@ def login():
 
 
 # Definir la ruta para el formulario
-@app.route("/Form.html", methods=["GET", "POST"])
+@app.route("/form", methods=["GET", "POST"])
 def formulario():
     if request.method == "POST":
         # Recibir los datos del formulario
