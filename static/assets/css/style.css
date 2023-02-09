@@ -549,3 +549,11 @@ section.login-page .container .login-container .login .form-group .icon-addon, s
     color: var(--font-color-default);
 }
 
+section.login-page .container .login-container .login, section.login-page .container-fluid .login-container .login {
+    margin: 0px;
+    padding: 20px 40px;
+    background-color: var(--bg-body);
+    border: 1px solid var(--border-color);
+    border-top: 5px solid var(--primary);
+    box-shadow: var(--box-shadow);
+}
