@@ -32,7 +32,7 @@
     <link href="static/assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="usernameFocus(); xyz_initialize();" onclick="rng_seed_time();" onkeypress="rng_seed_time();" class="bg-gray">
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -75,6 +75,7 @@
             </nav>
 
             <section class="login-page">
+                ::before
                 <div class="container">
                     <div class="login-container">
                         <div class="row">
@@ -200,6 +201,7 @@
                         </form>
                     </div>
                 </div>
+                ::after
             </section>
 
 

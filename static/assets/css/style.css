@@ -542,3 +542,15 @@ h6,
     width: 100%;
     height: 100%;
   }
+
+  section.login-page {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 175px);
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
