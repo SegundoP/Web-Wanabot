@@ -87,14 +87,14 @@ def login():
         else:
             # Si las credenciales no son válidas, redirigir al usuario a la página de inicio de sesión con un mensaje de error
             error_message = "Usuario o contraseña incorrectos"
-            return render_template("login.html", error_message=error_message)
+            return render_template("Login.html", error_message=error_message)
     else:
         # Mostrar la página de inicio de sesión
-        return render_template("login.html")
+        return render_template("Login.html")
 
 
 # Definir la ruta para el formulario
-@app.route("/formulario", methods=["GET", "POST"])
+@app.route("/Form.html", methods=["GET", "POST"])
 def formulario():
     if request.method == "POST":
         # Recibir los datos del formulario
