@@ -606,18 +606,6 @@ section.login-page .container .login-container .login .form-group .icon-addon .f
     line-height: 1.375rem;
 }
 
-section.login-page .container .login-container .login .form-group .icon-addon .fa, section.login-page .container-fluid .login-container .login .form-group .icon-addon .fa {
-    position: absolute;
-    top: 4px;
-    left: 11px;
-    z-index: 2;
-    margin-left: 0;
-    padding: 10px 0px;
-    width: 20px;
-    font-size: 1.125rem;
-    text-align: center;
-    color: var(--font-color-light);
-}
 
 section.login-page .container .login-container .login .form-group .icon-addon .form-control, section.login-page .container-fluid .login-container .login .form-group .icon-addon .form-control {
     float: var(--dir-start);
@@ -629,18 +617,6 @@ section.login-page .container .login-container .login .form-group .icon-addon .f
     line-height: 1.375rem;
 }
 
-section.login-page .container .login-container .login .form-group .icon-addon .fa, section.login-page .container-fluid .login-container .login .form-group .icon-addon .fa {
-    position: absolute;
-    top: 4px;
-    left: 11px;
-    z-index: 2;
-    margin-left: 0;
-    padding: 10px 0px;
-    width: 20px;
-    font-size: 1.125rem;
-    text-align: center;
-    color: var(--font-color-light);
-}
 
 .fa-lock:before {
     content: "\00f023";
@@ -658,6 +634,7 @@ section.login-page .container .login-container .login .form-group .icon-addon:af
     display: flex;
     content: " ";
 }
+
 
 .row {
     display: -ms-flexbox;
@@ -742,4 +719,27 @@ section.login-page {
 
 body.bg-gray {
     background: var(--am-login-bg-color) !important;
+}
+
+.fa, .fas {
+    font-weight: 900;
+}
+
+section.login-page .container .login-container .login .form-group, section.login-page .container-fluid .login-container .login .form-group {
+    margin: 10px 0px 0px 0px;
+}
+
+.fa, .fab, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
 }
