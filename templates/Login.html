@@ -74,134 +74,6 @@
                 </div>
             </nav>
 
-            <section class="login-page">
-                <div class="container">
-                    <div class="login-container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            </div>
-                        </div>
-                        <script language="JavaScript" type="text/javascript">
-                        url="Authenticator";
-                        xyz_form_id="loginform";
-                        </script>
-                        <form id="loginform" name="loginform" method="post" action="Dispatcher" onsubmit="return (checkSubmit() &amp;&amp; submit_xyz_form('loginform','user_name','password','ERRORMSG'))">
-                            <div class="login">
-                                <div id="authcredentials" style="">
-                                    <div class="row login-step-username">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div id="simulated_banner" class="simulated-banner" style="display: none;"><p>simulated</p></div>
-                                                <p class="login-switch">
-                                                    <span id="liveSpan" class="active">Live</span>
-                                                    <input type="checkbox" id="paperSwitch" data-switchery="true" style="display: none;"><span class="switchery switchery-small switchery-default" style="box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s;"><small style="left: 0px; background-color: rgb(255, 255, 255); transition: left 0.2s ease 0s;"></small></span>
-                                                    <span id="paperSpan">Paper</span>
-                                                </p>
-                                            <h1>Login</h1>
-                                            <div class="form-group">
-                                                <div class="icon-addon">
-                                                    <label for="user_name" class="fa fa-user"></label>
-                                                    <input type="text" id="user_name" name="user_name" value="" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off" size="10" onfocus="enableSubmit()" onclick="forceFocusUserName()" onkeypress="handleUserNameEvent(event)" placeholder="Username" class="form-control" onblur="initAuthentication('user_name','ERRORMSG');">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="icon-addon">
-                                                    <label for="password" class="fa fa-lock"></label>  
-                                                    <input type="password" id="password" name="password" size="10" autocomplete="off" onfocus="enableSubmit()" onclick="forceFocusPassword()" onkeypress="clickLogin(event)" placeholder="Password" class="form-control" maxlength="40" onblur="completeAuthentication('password','ERRORMSG');">
-                                                </div>
-                                            </div>
-                                                <p class="link-password">
-                                                    <a href="/credential.recovery/login-help?partnerID=null" target="_top">
-                                                        Need help?
-                                                    </a>
-                                                </p>
-                                            <br>
-                                        </div>
-                                    </div>
-                                    <div class="row login-step-notification" style="display: none;">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <img src="images/2fa-animated-once.gif" class="notificationImg" alt="Notification Preview">
-                                               <h2>Open the notification on your phone</h2>
-                                               <p>We sent you a notification to your phone. <strong>Tap the notification</strong> to complete two-factor authentication</p>
-                                               <p class="notifResent">Notification Resent</p>
-                                               <div class="sep"></div>
-                                               <div class="notifLinks">
-                                                   <div class="notifLinksLeft">
-                                                       <p class="link-label">Didn't receive the notification?</p>
-                                                       <ul>
-                                                           <li><a href="#" onclick="resendNotification(); return false;">Resend notification</a></li>
-                                                           <li><a href="#" onclick="notificationShowChallenge(); return false;">Log in with Challenge Code</a></li>
-                                                       </ul>
-                                                   </div>
-                                               </div>
-                                        </div>
-                                    </div>
-                                    <div class="row login-step-challenge" style="display: none;">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                               <h2>Enter the challenge code below into the Handy Key Mobile app to generate a response code.</h2>
-                                               <p>In the App, go to "Authenticate" from the Services page. 
-                                                   
-                                               </p>
-                                        </div>
-                                    </div>
-                                    <div class="row login-step-sf">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div id="authtable">
-                                                <div id="twofactselect" style="display: none;">
-                                                    <div class="form-group">
-                                                        <label class="control-label">
-                                                            Select Second Factor Device
-                                                        </label>
-                                                        <span id="sfContainer"></span>
-                                                    </div>
-                                                </div>
-                                                <p id="ibKeyInst"></p>
-                                                <div id="twofactauth">
-                                                    <div class="form-group">
-                                                        <button id="submitForm" type="submit" class="btn btn-lg btn-primary">
-                                                            Login
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div id="otp-delivery" class="otp-delivery-section" style="display: none;">
-                                                    <div class="form-group">
-                                                        <h1 class="otp-title">Pick your delivery method</h1>
-                                                        <p class="otp-text"></p>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="otp-buttons">
-                                                            <button class="otp-button otp-selection otp-select-sms btn btn-lg btn-primary"><span class="fa fa-comment fa-lg"></span> Text</button>
-                                                            <button class="otp-button otp-selection otp-select-voice btn btn-lg btn-primary"><span class="fa fa-phone fa-lg"></span> Voice</button>
-                                                            <button class="otp-button otp-selection otp-select-email btn btn-lg btn-primary"><span class="fa fa-envelope fa-lg"></span> Email</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <button class="otp-button otp-cancel btn btn-lg btn-default btn-block">Cancel</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div id="ERRORMSG" class="alert alert-danger margin-top-10" style="display: none;"></div>
-                                        <noscript>
-                                            <div class="alert alert-danger margin-top-10">
-                                                JavaScript must be enabled to use this application!
-                                            </div>
-                                        </noscript>
-                                    </div>
-                                </div>
-                                <input type="hidden" id="loginType" name="loginType" value="1">
-                                <!--To add a downtime message, alter line 6 and 7. Please leave the div below as is -->
-                                <div class="gsss">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
 
         </div>
         <!-- Navbar & Hero End -->
@@ -228,15 +100,17 @@
 
         <!-- Login Form -->
         <form action="/login" method="post">
-            <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" class="form-control" id="username" name="username">
+            <div class="container-xxl bg-primary newsletter my-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" id="password" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-            <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" name="password">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
     
