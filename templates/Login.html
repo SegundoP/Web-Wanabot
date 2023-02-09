@@ -97,60 +97,25 @@
         </div>
         <!-- Full Screen Search End -->
 
+        <br>
+        <br>
+        <br>
 
         <!-- Login Form -->
         <div>
             <form action="/login" method="post">
                 <div class="container-xxl bg-primary newsletter my-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="form-group">
-                        <label for="username" class="text-white fa fa-user">Username:</label>
+                        <label for="username" class="text-white fa fa-user"></label>
                         <input type="text" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" id="username" name="username" valuemaxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off" size="10" onfocus="enableSubmit()" onclick="forceFocusUserName()" placeholder="Username" onblur="initAuthentication('username', 'ERRORMSG')">
                     </div>
                     <div class="form-group">
-                        <label for="password" class="text-white fa fa-lock">Password:</label>
-                        <input type="password" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" id="password" name="password">
+                        <label for="password" class="text-white fa fa-lock"></label>
+                        <input type="password" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" id="password" name="password" valuemaxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="40" onfocus="enableSubmit()" onclick="forceFocusUserName()" placeholder="Password" onblur="initAuthentication('password', 'ERRORMSG')">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
-        </div>
-
-    
-            
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    
-                        <div id="ERRORMSG" class="alert alert-danger margin-top-10" style="display: none;"></div>
-                    
-
-                    <noscript>
-                        <div class="alert alert-danger margin-top-10">
-                            JavaScript must be enabled to use this application!
-                        </div>
-                    </noscript>
-                </div>
-            </div>
-
-                
-
-            
-            <input type="hidden" id="loginType" name="loginType" value="1">
-
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            <!--To add a downtime message, alter line 6 and 7. Please leave the div below as is -->
-
-
-            <div class="gsss">
-            </div>
         </div>
         
 
@@ -200,9 +165,6 @@
         </div>
         <!-- Footer End -->
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
